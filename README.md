@@ -11,3 +11,8 @@ sh -c "$(curl -fsLS get.chezmoi.io)"
 ```sh
 pkg install chezmoi
 ```
+
+## Download dotfiles
+```sh
+chezmoi init dragonnull64
+```
