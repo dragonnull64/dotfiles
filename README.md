@@ -1,6 +1,6 @@
 # dotfiles
 
-## Install Chezmoi
+## Install chezmoi
 
 ### Ubuntu
 ```sh
