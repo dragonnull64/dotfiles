@@ -14,5 +14,5 @@ pkg install chezmoi
 
 ## Download dotfiles
 ```sh
-chezmoi init dragonnull64
+chezmoi init --ssh dragonnull64
 ```
