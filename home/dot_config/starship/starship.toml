@@ -1,0 +1,83 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$username\
+$hostname\
+$os\
+[](fg:nord8 bg:nord9)\
+$directory\
+[](fg:nord9 bg:nord10)\
+$git_branch\
+$git_status\
+[](fg:nord10 bg:nord3)\
+$time\
+[](fg:nord3)\
+$line_break$character"""
+
+palette = 'nord'
+
+[palettes.nord]
+nord0 = '#2e3440'
+nord1 = '#3b4252'
+nord2 = '#434c5e'
+nord3 = '#4c566a'
+nord4 = '#d8dee9'
+nord5 = '#e5e9f0'
+nord6 = '#eceff4'
+nord7 = '#8fbcbb'
+nord8 = '#88c0d0'
+nord9 = '#81a1c1'
+nord10 = '#5e81ac'
+nord11 = '#bf616a'
+nord12 = '#d08770'
+nord13 = '#ebcb8b'
+nord14 = '#a3be8c'
+nord15 = '#b48ead'
+
+[username]
+show_always = true
+style_user = "fg:nord0 bg:nord8 bold"
+style_root = "fg:nord0 bg:nord8 bold"
+format = '[ $user]($style)'
+
+[hostname]
+disabled = false
+ssh_only = false
+trim_at = '.companyname.com'
+style = "fg:nord0 bg:nord8 bold"
+format = "[$ssh_symbol@$hostname]($style)"
+
+[os]
+disabled = false
+style = "fg:nord0 bg:nord8"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+Android = ""
+
+[directory]
+style = "fg:nord0 bg:nord9"
+format = "[ $path ]($style)"
+truncation_length = 100
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:nord10"
+format = '[[ $symbol $branch ](fg:nord0 bg:nord10)]($style)'
+
+[git_status]
+style = "bg:nord10"
+format = '[[($all_status$ahead_behind )](fg:nord0 bg:nord10)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = " bg:nord3"
+format = '[[  $time ](fg:nord4  bg:nord3)]($style)'
+
+[line_break]
+disabled = false
